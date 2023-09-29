@@ -3,14 +3,12 @@
       <div class="col-12">
         <Carousel :value="products" :numVisible="4" :numScroll="4" :responsiveOptions="responsiveOptions">
           <template #item="slotProps">
-            <div class="txt-font-faimily surface-border border-round text-center">
-              <div>
-                <img class="img-product" :src="slotProps.data.image" :alt="slotProps.data.name" />
+            <div class="txt-font-faimily surface-border border-round text-center flex justify-content-center">
+              <div class="background-pr">
+                <!-- <img class="img-product" :src="slotProps.data.image" :alt="slotProps.data.name" /> -->
+                <div class="txt-product">{{ slotProps.data.news }}</div>
               </div>
-              <div>
-                <div class="txt-product">{{ slotProps.data.name }}</div>
-                <div class="txt-description">{{ slotProps.data.description }}</div>
-              </div>
+      
             </div>
           </template>
         </Carousel>
@@ -20,7 +18,7 @@
   
   <script>
   import Carousel from "primevue/carousel";
-  import imageProduct from "@/assets/img/green.png";
+  // import imageProduct from "@/assets/img/green.png";
   
   export default {
     components: {
@@ -31,77 +29,40 @@
         activeIndex: 0,
         responsiveOptions: [
           {
-            breakpoint: "1500px",
-            numVisible: 4,
-            numScroll: 4,
-          },
-          {
-            breakpoint: "1199px",
+            breakpoint: "1600px",
             numVisible: 3,
             numScroll: 3,
           },
           {
-            breakpoint: "991px",
+            breakpoint: "1199px",
             numVisible: 2,
             numScroll: 2,
           },
           {
-            breakpoint: "380px",
-            numVisible: 2,
-            numScroll: 2,
-          },
+            breakpoint: "991px",
+            numVisible: 1,
+            numScroll: 1,
+          }
         ],
         products: [
           {
-            name: "ขวดน้ำ Spite สีเขียว 1",
-            description: "50 บาท",
-            image: imageProduct,
+            news: " ทางเลือกของคนใส่ใจตัวเอง ควรกินอาหารหลากหลายครบ 5 หมู่ ในสัดส่วนที่เหมาะสมเป็นประจำ"
           },
           {
-            name: "ขวดน้ำ Spite สีเขียว 2",
-            description: "50 บาท",
-            image: imageProduct,
+            news: "หลายๆคนคงอยากหารายได้เสริม หรือทำธุรกิจส่วนตัวกันในยุคนี้ เพื่อที่จะมีรายได้เพิ่มขึ้น  "
           },
           {
-            name: "ขวดน้ำ Spite สีเขียว 3",
-            description: "50 บาท",
-            image: imageProduct,
+            news: "หลายๆคนคงอยากหารายได้เสริม หรือทำธุรกิจส่วนตัวกันในยุคนี้ เพื่อที่จะมีรายได้เพิ่มขึ้น  "
           },
           {
-            name: "ขวดน้ำ Spite สีเขียว 4",
-            description: "50 บาท",
-            image: imageProduct,
+            news: "หลายๆคนคงอยากหารายได้เสริม หรือทำธุรกิจส่วนตัวกันในยุคนี้ เพื่อที่จะมีรายได้เพิ่มขึ้น  "
           },
           {
-            name: "ขวดน้ำ Spite สีเขียว 5",
-            description: "50 บาท",
-            image: imageProduct,
+            news: "หลายๆคนคงอยากหารายได้เสริม หรือทำธุรกิจส่วนตัวกันในยุคนี้ เพื่อที่จะมีรายได้เพิ่มขึ้น  "
           },
-          {
-            name: "ขวดน้ำ Spite สีเขียว 6",
-            description: "50 บาท",
-            image: imageProduct,
-          },
-          {
-            name: "ขวดน้ำ Spite สีเขียว 7",
-            description: "50 บาท",
-            image: imageProduct,
-          },
-          {
-            name: "ขวดน้ำ Spite สีเขียว 8",
-            description: "50 บาท",
-            image: imageProduct,
-          },
-          {
-            name: "ขวดน้ำ Spite สีเขียว 9",
-            description: "50 บาท",
-            image: imageProduct,
-          },
-          {
-            name: "ขวดน้ำ Spite สีเขียว 10",
-            description: "50 บาท",
-            image: imageProduct,
-          },
+
+          
+         
         ],
       };
     },
@@ -141,16 +102,24 @@
     border-radius: 10px;
   }
   .txt-product{
-  color: #eb0606;
+  /* color: #ffffff; */
+  color: #242222;
   font-size: 30px;
-  -webkit-text-stroke: 0.5px #eb0606;
+  text-shadow: 1px 1px 2px rgb(179, 0, 0);
   }
   .txt-description{
   font-size: 18px;
-  color:#797373;
+  color:#242121;
   -webkit-text-stroke: 0.5px;
   }
-  
+
+  .background-pr{
+    width: 80%;
+    padding: 25px;
+      /* background: linear-gradient(110deg, #d43535 60%, #e96060 60%); */
+    background: rgb(255, 221, 221);
+    border-radius: 5px;
+  }
   
   
   
@@ -162,6 +131,12 @@
   }
   .txt-description{
   font-size: 8px;
+  }
+  .background-pr{
+    width: 80%;
+    padding: 25px;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
   }
   }
   

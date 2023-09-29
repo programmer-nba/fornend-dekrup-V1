@@ -7,13 +7,13 @@
     
       <div class="content-center"> 
         <div class="content">
-        <p class="txt-head">เลื่อนดูผลิตภัณฑ์เพิ่มเติม</p>
-        <p class="txt-head">เลื่อนดูผลิตภัณฑ์เพิ่มเติม</p>
+        <p class="txt-head">ยินดีต้อนรับเข้าสู่เว็บไซต์</p>
+        <p class="txt-head">ยินดีต้อนรับเข้าสู่เว็บไซต์</p>
       </div></div>
     
-      <ImageSlide></ImageSlide>
+      <ImageSlide ></ImageSlide>
          <div class="text-center">
-            <a href="/aboutview" class="text-center txt-more">ดูสินค้าของเราทั้งหมดที่นี่ <i class="pi pi-arrow-right"></i></a>
+            <a href="/aboutview" class="text-center txt-more">เข้าสู่ระบบเพื่อซื้อสินค้า <i class="pi pi-arrow-right"></i></a>
          </div>
     
     
@@ -38,15 +38,13 @@
     </template>
     
     <script>
-    import { ref, onMounted } from "vue";
+    // import { ref, onMounted } from "vue";
     import NavbarView from "./NavbarView.vue";
-    import Menubar from "primevue/menubar";
     import ImageSlide from "./ImageSlide.vue";
     import FooterView from "./FooterView.vue"
     
     export default {
       components: {
-        Menubar,
         ImageSlide,
         NavbarView,
         FooterView
@@ -238,7 +236,7 @@
     
     .txt-more{
         font-size: 25px;
-        -webkit-text-stroke: 1.5px;
+        -webkit-text-stroke: 0.5px;
         color: #eb0606;
     }
     
@@ -308,6 +306,7 @@
     }
     .txt-more{
     font-size: 16px;
+    -webkit-text-stroke: 0.2px;
     }
     .txt-sme{
     font-size: 25px;

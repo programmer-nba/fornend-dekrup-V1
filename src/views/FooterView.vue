@@ -16,7 +16,12 @@
             <h1 class="txt-head">ติดต่อเรา</h1>
             <p class="txt-link">ติดต่อเรา 0861234567</p>
         </div>
+        <div class="col-12 ">
+            <p style="color: #ffff; text-align: center; font-size: 12px;">Copyright © 2023; Developed by NBA Digital Service; Theme by Themefisher</p>
+        </div>
 
+
+        
 
     </div>
 </template>
@@ -61,6 +66,7 @@
 @media only screen and (max-width:576px){
     .txt-head{
         font-size: 20px;
+        -webkit-text-stroke: 0px;
     }
  
     .img-logo{

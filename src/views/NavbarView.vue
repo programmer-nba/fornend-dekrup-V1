@@ -8,9 +8,9 @@
         </span>
 
     </div>
-    <div class=" col-2 md:col-2 lg:col-6">
-        <Menubar :model="items" style=" font-family: 'Kanit', sans-serif;"
-            class=" custom-menu border-round-3xl p-0 mt-2 w-auto hover:border-2 hover:border-purple-900 flex align-items-center justify-content-center bg-white">
+    <div class=" col-2 md:col-2 lg:col-6 flex justify-content-center" >
+        <Menubar :model="items" 
+            class=" custom-menu border-round-3xl p-0 mt-2 width-navbar toggle-navbar  hover:border-2 hover:border-purple-900 flex align-items-center justify-content-center bg-white">
         </Menubar>
     </div>
 
@@ -39,11 +39,6 @@ const items = ref([
         label: "หน้าหลัก",
         icon: "pi pi-fw pi-home",
         // to: "/",
-    },
-    {
-        label: "สินค้าของเรา",
-        icon: 'pi pi-shopping-cart',
-        // to: "/aboutview",
     },
     {
         label: "สมัครสมาชิกกับเรา",
@@ -123,13 +118,20 @@ margin-right: 10px;
     border-radius: 10px;
 }
 
-
+.width-navbar{
+    font-family: 'Kanit', sans-serif; width: 60%;
+}
 @media only screen and (max-width:576px){
    .btn-login {
    font-size: 18px !important;
    padding-left: 17px !important;
-   margin-top: -7px !important;
    padding-right: 15px !important;
+}
+.toggle-navbar{
+    font-family: 'Kanit', sans-serif; width: 100%;
+}
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text {
+    -webkit-text-stroke: 0.5px;
 }
 }
 </style>
