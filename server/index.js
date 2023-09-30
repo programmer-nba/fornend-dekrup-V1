@@ -1,12 +1,16 @@
-const express = require('express');
+require("dotenv").config();
+const express = require("express");
 const path = require('path');
-
 const app = express();
 
-app.use(express.static(path.join('../build', '')));
+app.use(express.static(path.join('../dist', '')));
 
 app.get('/*', (req, res) => {
-  res.sendFile(path.join('../', 'build', 'index.html'));
+  res.sendFile(path.join('../', 'dist', 'index.html'));
 });
 
-app.listen(3000);
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+  console.log(`API Runing PORT ${port}`);
+});
