@@ -9,8 +9,6 @@ import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css';
 
 
-
-
 Vue.use(PrimeVue);
 Vue.config.productionTip = false
 
