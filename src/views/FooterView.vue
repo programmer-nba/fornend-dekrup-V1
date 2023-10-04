@@ -3,18 +3,18 @@
         <div class="col-12 lg:col-3 " style="display: flex; align-items: center;">
             <img src="../assets/img/0000DKRUB.png" class="img-logo" alt="">
         </div>
-        <div class="col-6 md:col-4 lg:col-2 lg:mt-7">
+        <div class="col-12 md:col-4 lg:col-2 lg:mt-7">
             <h1 class="txt-head">เกี่ยวกับเรา</h1>
             <a href="/" class="txt-link">หน้าแรก</a><br>
-            <a href="/aboutview" class="txt-link">สินค้าของเราทั้งหมด</a>
         </div>
-        <div class="col-6 md:col-4 lg:col-3 lg:mt-7">
+        <div class="col-12 md:col-4 lg:col-4 lg:mt-7">
             <h1 class="txt-head">ที่อยู่บริษัท</h1>
-            <p class="txt-link">458/2 ต.แม่เหียะ อ.เมืองเชียงใหม่ จ.เมืองเชียงใหม่ 55000</p>
+            <a href="https://maps.app.goo.gl/hu3TSkUVeQyZzuge6" class="txt-link">บริษัท ดีครับ คอมเมิร์ช จำกัด
+สำนักงานใหญ่  เลขที่ 30/479 ซอยนวมินทร์ 80 แขวงนวลจันทร์ เขตบึงกุ่ม กรุงเทพมหานคร 10230 </a>
         </div>
-        <div class="col-6 md:col-4 lg:col-3 lg:mt-7">
+        <div class="col-12 md:col-4 lg:col-3 lg:mt-7">
             <h1 class="txt-head">ติดต่อเรา</h1>
-            <p class="txt-link">ติดต่อเรา 0861234567</p>
+            <p class="txt-link">หมายเลขโทรศัพท์ภายใน : 02-396-8440-1</p>
         </div>
         <div class="col-12 ">
             <p style="color: #ffff; text-align: center; font-size: 12px;">Copyright © 2023; Developed by NBA Digital Service; Theme by Themefisher</p>
@@ -52,6 +52,11 @@
     font-size: 16px;
     color: #dad5d5;
     -webkit-text-stroke: 0.5px;
+    text-decoration: none;
+    
+}
+.txt-link:hover{
+    color: rgb(255, 166, 0);
     
 }
 @media only screen and (max-width:922px){
@@ -75,6 +80,11 @@
 }
 .background-footer{
     height: auto;
+}
+.txt-link{
+    font-size: 13px;
+    padding-left: 20px;
+    
 }
 }
 </style>
