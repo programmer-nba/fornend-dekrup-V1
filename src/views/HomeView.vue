@@ -14,7 +14,7 @@
 
     <ImageSlide></ImageSlide>
     <div class="text-center">
-      <a href="/aboutview" class="text-center txt-more">เข้าสู่ระบบเพื่อซื้อสินค้า <i class="pi pi-arrow-right"></i></a>
+      <a href="http://shop.dekrubshop.com/login" class="text-center txt-more">เข้าสู่ระบบเพื่อซื้อสินค้า <i class="pi pi-arrow-right"></i></a>
     </div>
 
 
