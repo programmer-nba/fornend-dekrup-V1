@@ -36,10 +36,9 @@
 </template>
     
 <script>
-// import { ref, onMounted } from "vue";
 import NavbarView from "./NavbarView.vue";
 import ImageSlide from "./ImageSlide.vue";
-import FooterView from "./FooterView.vue"
+import FooterView from "./FooterView.vue";
 
 export default {
   components: {
@@ -75,7 +74,7 @@ export default {
 </script>
     
     
-<style scoped>
+<style scoped lang="css">
 /* .body{
       overflow-x: hidden !important;
     } */
@@ -91,7 +90,6 @@ export default {
   position: relative;
   white-space: nowrap;
   text-align: center;
-  /* เพิ่มบรรทัดนี้ */
 }
 
 .content .txt-head {

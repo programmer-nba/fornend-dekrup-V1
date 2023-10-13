@@ -4,8 +4,16 @@
         <Carousel :value="products" :numVisible="4" :numScroll="4" :responsiveOptions="responsiveOptions">
           <template #item="slotProps">
             <div class="txt-font-faimily surface-border border-round text-center flex justify-content-center">
+              
               <div class="background-pr">
-                <!-- <img class="img-product" :src="slotProps.data.image" :alt="slotProps.data.name" /> -->
+                <div class="header">DKRUB</div>
+                <i :class="slotProps.data.icon" 
+                style="
+                font-size: 50px; 
+                padding-top: 25px;
+                color: red;
+                text-shadow: 1px 1px 2px rgb(179, 0, 0);">
+                </i> 
                 <div class="txt-product">{{ slotProps.data.news }}</div>
               </div>
       
@@ -39,27 +47,32 @@
             numScroll: 2,
           },
           {
-            breakpoint: "991px",
+            breakpoint: "576px",
             numVisible: 1,
             numScroll: 1,
           }
         ],
         products: [
           {
-            news: " ทางเลือกของคนใส่ใจตัวเอง ควรกินอาหารหลากหลายครบ 5 หมู่ ในสัดส่วนที่เหมาะสมเป็นประจำ"
+            news: "ช้อปสินค้าของเรา",
+            icon: "pi pi-shopping-cart",
           },
           {
-            news: "หลายๆคนคงอยากหารายได้เสริม หรือทำธุรกิจส่วนตัวกันในยุคนี้ เพื่อที่จะมีรายได้เพิ่มขึ้น  "
+            news: "ช้อปได้ช้อปดี",
+            icon: "pi pi-shopping-bag",
           },
           {
-            news: "หลายๆคนคงอยากหารายได้เสริม หรือทำธุรกิจส่วนตัวกันในยุคนี้ เพื่อที่จะมีรายได้เพิ่มขึ้น  "
+            news: "ที่ ''ดีครับ'' ",
+            icon: "pi pi-map-marker",
           },
           {
-            news: "หลายๆคนคงอยากหารายได้เสริม หรือทำธุรกิจส่วนตัวกันในยุคนี้ เพื่อที่จะมีรายได้เพิ่มขึ้น  "
+            news: "เลือกรับสินค้าได้หลายแพลตฟอร์ม",
+            icon: "pi pi-box",
           },
           {
-            news: "หลายๆคนคงอยากหารายได้เสริม หรือทำธุรกิจส่วนตัวกันในยุคนี้ เพื่อที่จะมีรายได้เพิ่มขึ้น  "
-          },
+            news: "มีค่าคอมมิชชั่น สำหรับผู้แนะนำ",
+            icon: "pi pi-wallet",
+          }
 
           
          
@@ -71,7 +84,7 @@
   
   
   
-  <style >
+  <style>
 
 .p-carousel-prev, .p-carousel-next {
     align-self: center;
@@ -101,25 +114,48 @@
     background: #ff000026;
     border-radius: 10px;
   }
-  .txt-product{
-  /* color: #ffffff; */
+  /* .txt-product{
   color: #242222;
   font-size: 30px;
   text-shadow: 1px 1px 2px rgb(179, 0, 0);
+  padding:25px
+  } */
+
+  .txt-product{
+  /* color: #ffffff; */
+  color: #ff0000;
+  font-size:20px;
+  text-shadow: 1px 1px 2px rgb(179, 0, 0);
+  padding:16px
   }
-  .txt-description{
-  font-size: 18px;
-  color:#242121;
-  -webkit-text-stroke: 0.5px;
-  }
+ 
+  /* .background-pr{
+    width: 80%;
+    padding: 25px;
+    background: rgb(255, 221, 221);
+    border-radius: 5px;
+  } */
+
 
   .background-pr{
     width: 80%;
-    padding: 25px;
-      /* background: linear-gradient(110deg, #d43535 60%, #e96060 60%); */
-    background: rgb(255, 221, 221);
-    border-radius: 5px;
+    border-radius: 15px;
+    border: 2px solid rgb(253, 34, 34);
+    box-shadow: rgba(247, 0, 0, 0.24) 0px 3px 8px;
   }
+
+  .header{
+    border-top-right-radius: 11px;
+    border-bottom:2px solid rgb(248, 36, 36);
+    background: #ffe0de;
+    border-top-left-radius: 11px;
+    height: 50px;
+    font-size: 25px;
+    padding-top: 5px;
+    -webkit-text-stroke: 2px;
+    color: red;
+  }
+
   
   
   
@@ -134,9 +170,6 @@
   }
   .background-pr{
     width: 80%;
-    padding: 25px;
-    background: rgb(255, 255, 255);
-    border-radius: 5px;
   }
   }
   
