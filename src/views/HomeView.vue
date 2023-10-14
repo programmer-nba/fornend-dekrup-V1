@@ -13,6 +13,8 @@
     </div>
 
     <ImageSlide></ImageSlide>
+
+    
     <div class="text-center">
       <a href="http://shop.dekrubshop.com/login" class="text-center txt-more">เข้าสู่ระบบเพื่อซื้อสินค้า <i class="pi pi-arrow-right"></i></a>
     </div>
@@ -28,7 +30,10 @@
 
 
 
+
+
     <FooterView></FooterView>
+    <ScrollTop></ScrollTop>
 
 
 
@@ -39,12 +44,14 @@
 import NavbarView from "./NavbarView.vue";
 import ImageSlide from "./ImageSlide.vue";
 import FooterView from "./FooterView.vue";
+import ScrollTop from 'primevue/scrolltop';
 
 export default {
   components: {
     ImageSlide,
     NavbarView,
-    FooterView
+    FooterView,
+    ScrollTop,
   },
   data() {
     return {
@@ -67,6 +74,8 @@ export default {
       ];
     },
   },
+
+    
   mounted() {
     this.setItemMenu();
   },

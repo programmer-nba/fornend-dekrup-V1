@@ -9,7 +9,7 @@
         </div>
         <div class="col-12 md:col-4 lg:col-4 lg:mt-7">
             <h1 class="txt-head">ที่อยู่บริษัท</h1>
-            <a href="https://maps.app.goo.gl/hu3TSkUVeQyZzuge6" class="txt-link">บริษัท ดีครับ คอมเมิร์ช จำกัด
+            <a href="https://maps.app.goo.gl/hu3TSkUVeQyZzuge6" target="_blank" class="txt-link">บริษัท ดีครับ คอมเมิร์ช จำกัด
 สำนักงานใหญ่  เลขที่ 30/479 ซอยนวมินทร์ 80 แขวงนวลจันทร์ เขตบึงกุ่ม กรุงเทพมหานคร 10230 </a>
         </div>
         <div class="col-12 md:col-4 lg:col-3 lg:mt-7">
@@ -80,12 +80,13 @@
 }
 .background-footer{
     height: auto;
+    padding: 30px;
 }
 .txt-link{
     font-size: 13px;
-    padding-left: 20px;
     
 }
+
 }
 </style>
 
