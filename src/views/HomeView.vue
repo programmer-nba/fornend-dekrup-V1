@@ -14,9 +14,10 @@
 
     <ImageSlide></ImageSlide>
 
-    
+
     <div class="text-center">
-      <a href="http://shop.dekrubshop.com/login" class="text-center txt-more">เข้าสู่ระบบเพื่อซื้อสินค้า <i class="pi pi-arrow-right"></i></a>
+      <a href="http://shop.dekrubshop.com/login" class="text-center txt-more">เข้าสู่ระบบเพื่อซื้อสินค้า <i
+          class="pi pi-arrow-right"></i></a>
     </div>
 
 
@@ -45,6 +46,7 @@ import NavbarView from "./NavbarView.vue";
 import ImageSlide from "./ImageSlide.vue";
 import FooterView from "./FooterView.vue";
 import ScrollTop from 'primevue/scrolltop';
+import { Function } from "@/server/function";
 
 export default {
   components: {
@@ -53,13 +55,20 @@ export default {
     FooterView,
     ScrollTop,
   },
-  data() {
-    return {
-      itemMenu: [],
-    };
+  data: () => ({
+    itemMenu: '',
+    function: '',
+  }),
+  setup() {
+    const fuc = new Function();
+    return { fuc }
+  },
+  async mounted() {
+    this.setItemMenu();
+    await this.getFunction();
   },
   methods: {
-    setItemMenu() {
+    async setItemMenu() {
       this.itemMenu = [
         {
           label: "หน้าแรก",
@@ -73,12 +82,15 @@ export default {
         },
       ];
     },
+
+    async getFunction() {
+      await this.fuc.GetFunction().then(result => {
+        this.function = result.data;
+        console.log(result.data);
+      })
+    }
   },
 
-    
-  mounted() {
-    this.setItemMenu();
-  },
 };
 </script>
     
